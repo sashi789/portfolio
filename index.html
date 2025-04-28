@@ -15,7 +15,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="#home">DataPro</a>
+                <a href="#home">Data Enthusiast</a>
             </div>
             <nav>
                 <ul>
@@ -24,7 +24,6 @@
                     <li><a href="#education">Education</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -48,21 +47,21 @@
                         <a href="#contact" class="btn secondary-btn">Contact Me</a>
                     </div>
                     <div class="social-icons">
-                        <a href="" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-kaggle"></i></a>
+                        <a href="https://www.linkedin.com/in/sashidharchary" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/sashi789" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <img src="images/profile.jpg" alt="Sashidhar Chary Viswanathula" class="profile-image">
                 </div>
             </div>
+            <!-- Removed duplicate hero-image div -->
         </div>
-        <div class="scroll-down">
-            <a href="#about"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
+    </div>
+    <div class="scroll-down">
+        <a href="#about"><i class="fas fa-chevron-down"></i></a>
+    </div>
+</section>
 
     <section id="about" class="about">
         <div class="container">
@@ -72,7 +71,12 @@
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="images/about.jpg" alt="About Me">
+                    <!-- Replacing the image with data sphere -->
+                    <div class="data-sphere-container about-sphere">
+                        <div class="data-sphere" id="dataSphere">
+                            <!-- Data tools will be added via JavaScript -->
+                        </div>
+                    </div>
                 </div>
                 <div class="about-text">
                     <h3>Data Professional with a Passion for Insights</h3>
@@ -83,7 +87,12 @@
                         <div class="skill-tags">
                             <span>Python</span>
                             <span>SQL</span>
-                            <span>R</span>
+                            <span>dbt</span>
+                            <span>Kafka</span>
+                            <span>Airflow</span>
+                            <span>AWS</span>
+                            <span>Azure</span>
+                            <span>GCP</span>
                             <span>Tableau</span>
                             <span>Power BI</span>
                             <span>Machine Learning</span>
@@ -91,6 +100,9 @@
                             <span>ETL Pipelines</span>
                             <span>Big Data</span>
                             <span>Statistical Analysis</span>
+                            <span>LLMs</span>
+                            <span>LangChain</span>
+                            
                         </div>
                     </div>
                 </div>
@@ -108,19 +120,18 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h3>Master's Degree in Data Science</h3>
-                        <h4>University Name</h4>
-                        <p class="timeline-date">2020 - 2022</p>
-                        <p>Focused on advanced machine learning algorithms, statistical modeling, and big data technologies. Completed thesis on predictive analytics for healthcare outcomes.</p>
+                        <h3>Master's Degree in Computer Science</h3>
+                        <h4>University of North Texas</h4>
+                        <p>Focused on advanced machine learning algorithms, statistical modeling, and big data technologies.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>Bachelor's Degree in Computer Science</h3>
-                        <h4>University Name</h4>
-                        <p class="timeline-date">2016 - 2020</p>
-                        <p>Developed strong programming fundamentals and analytical skills. Specialized in data structures and algorithms with minor in statistics.</p>
+                        <h4>Jawaharla Nehru Technological University</h4>
+                        <p class="timeline-date"></p>
+                        <p>Developed strong programming fundamentals and analytical skills.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -128,10 +139,12 @@
                     <div class="timeline-content">
                         <h3>Certifications</h3>
                         <ul class="certification-list">
-                            <li>Google Data Analytics Professional Certificate</li>
-                            <li>IBM Data Science Professional Certificate</li>
-                            <li>Microsoft Certified: Azure Data Scientist Associate</li>
-                            <li>Tableau Desktop Specialist</li>
+                            <li>Microsoft Certified Data Engineer Associate</li>
+                            <li>IBM Data Analyst Professional Certificate</li>
+                            <li>Microsoft Certified Data Analyst Associate</li>
+                            <li>Snowflake Hands-On Essentials: Data Warehousing Workshop</li>
+                            <li>Snowflake Hands-On Essentials: Collaboration, Marketplace & Cost Estimation Workshop</li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -150,27 +163,27 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>Data Analyst</h3>
-                        <h4>Company Name</h4>
-                        <p class="timeline-date">2022 - Present</p>
-                        <p>Analyze complex datasets to identify trends and insights that drive business decisions. Create interactive dashboards using Tableau and Power BI. Collaborate with cross-functional teams to implement data-driven strategies.</p>
+                        <h4>UNT System</h4>
+                        <p class="timeline-date">2023 - Present</p>
+                        <p>At UNT System, I've enhanced IT operations through strategic data solutions, creating Power BI dashboards that increased stakeholder engagement by 30% across multiple campuses. I implemented automation solutions using GitHub Actions, PowerShell, and Power Automate that eliminated manual processes, saved hours daily, and reduced manual processing by 90%. My self-service dashboards integrating SQL, SharePoint, and ServiceNow data streamlined communication and improved decision-making organization-wide.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Data Analyst</h3>
+                        <h4>OM Sai Enterprises</h4>
+                        <p class="timeline-date">2021 - 2023</p>
+                        <p>As a data analyst, I built a scalable Azure data platform that migrated 5TB+ of data and cut processing time by 50% using ADF, ADLS, Databricks, and Synapse. I enhanced analytics capabilities by 40% through developing Snowflake and dbt models with star schema design. By analyzing support data with Python and SQL, I increased customer satisfaction by 20%. I unified reporting across 5 business units through custom REST API integrations and increased dashboard adoption by 35% by implementing improvements validated through A/B testing.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>Data Science Intern</h3>
-                        <h4>Company Name</h4>
-                        <p class="timeline-date">2021 - 2022</p>
-                        <p>Developed machine learning models to predict customer behavior. Cleaned and preprocessed large datasets. Presented findings to stakeholders through visualizations and reports.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Research Assistant</h3>
-                        <h4>University Research Lab</h4>
-                        <p class="timeline-date">2020 - 2021</p>
-                        <p>Assisted in research projects focused on natural language processing and sentiment analysis. Implemented algorithms and conducted statistical analysis of results.</p>
+                        <h4>Aican Automate</h4>
+                        <p class="timeline-date">2020</p>
+                        <p>Assisted in projects focused on natural language processing and sentiment analysis. Implemented algorithms and conducted statistical analysis of results.</p>
                     </div>
                 </div>
             </div>
@@ -187,38 +200,42 @@
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="analysis">Data Analysis</button>
                 <button class="filter-btn" data-filter="ml">Machine Learning</button>
-                <button class="filter-btn" data-filter="viz">Visualization</button>
                 <button class="filter-btn" data-filter="engineering">Data Engineering</button>
             </div>
             <div class="projects-grid">
-                <div class="project-card" data-category="ml">
+                <div class="project-card" data-category="engineering">
                     <div class="project-img">
                         <img src="images/project1.jpg" alt="Project 1">
                     </div>
                     <div class="project-info">
-                        <h3>Predictive Customer Churn Model</h3>
-                        <p>Developed a machine learning model to predict customer churn with 85% accuracy using historical customer data.</p>
+                        <h3>data pipeline built on Snowflake Cloud Data Warehouse</h3>
+                        <p>This project demonstrates a complete data pipeline built on Snowflake Cloud Data Warehouse, following a layered architecture. The system automates data ingestion, transformation, and reporting, utilizing tools like GitHub Actions, API sources, and Snowflake's native features. The architecture ensures clean, reliable, and timely data for business insights through dashboards.</p>
                         <div class="project-tags">
                             <span>Python</span>
-                            <span>Scikit-learn</span>
-                            <span>XGBoost</span>
+                            <span>Snowflake</span>
+                            <span>Github Actions</span>
+                            <span>AWS</span>
                         </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/sashi789/Snowflake-DE-Project" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="project-card" data-category="viz">
+                <div class="project-card" data-category="ml">
                     <div class="project-img">
                         <img src="images/project2.jpg" alt="Project 2">
                     </div>
                     <div class="project-info">
-                        <h3>Interactive Sales Dashboard</h3>
-                        <p>Created an interactive dashboard visualizing sales performance across regions and product categories.</p>
+                        <h3>ICE Breaker</h3>
+                        <p>Ever feel stuck starting a conversation with someone you just found online?  
+                            This AI-powered agent does the work for you — it finds a person’s LinkedIn and Twitter profiles, scrapes their activity, and uses OpenAI GPT to generate a personalized ice breaker that includes a short summary and two interesting facts.
+                            </p>
                         <div class="project-tags">
-                            <span>Tableau</span>
-                            <span>SQL</span>
-                            <span>Data Visualization</span>
+                            <span>LangChain</span>
+                            <span>Open AI</span>
+                            <span>Scrapin.io</span>
+                            <span>Tavily API</span>
+                            <span>Python</span>
                         </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/sashi789/Ice-Breaker-using-Langchain" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="project-card" data-category="analysis">
@@ -226,14 +243,16 @@
                         <img src="images/project3.jpg" alt="Project 3">
                     </div>
                     <div class="project-info">
-                        <h3>Market Basket Analysis</h3>
-                        <p>Performed association rule mining on retail transaction data to identify product affinities and optimize store layout.</p>
+                        <h3>AI Powered Advanced Data Analysis Tool</h3>
+                        <p>This is a comprehensive data analysis tool built with Streamlit that provides a complete suite of features for data exploration, cleaning, visualization, and AI-powered insights. The application allows users to upload data from various sources, perform exploratory data analysis, clean and transform data, create interactive visualizations, and leverage AI to gain deeper insights.</p>
                         <div class="project-tags">
-                            <span>R</span>
-                            <span>Association Rules</span>
-                            <span>Data Mining</span>
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Open AI</span>
+                            <span>Python</span>
+                            <span>Streamlit</span>
                         </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/sashi789/AI-Powered-Data-Analysis" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="project-card" data-category="engineering">
@@ -241,32 +260,40 @@
                         <img src="images/project4.jpg" alt="Project 4">
                     </div>
                     <div class="project-info">
-                        <h3>ETL Pipeline for Social Media Data</h3>
-                        <p>Built an automated ETL pipeline to extract, transform, and load social media data for sentiment analysis.</p>
+                        <h3>Reddit ETL Pipeline</h3>
+                        <p>A project that extracts data from Reddit using its API, processes it with Apache Airflow, and stores it efficiently in Amazon S3. This data is then cataloged with AWS Glue, queried using Amazon Athena, and loaded into Amazon Redshift for analytics. Docker is used to containerize and orchestrate the project.</p>
                         <div class="project-tags">
                             <span>Apache Airflow</span>
                             <span>Python</span>
                             <span>AWS</span>
+                            <span>Docker</span>
+                            <span>Rest API</span>
                         </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/sashi789/DE_REDDIT_PROJECT" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
+                </div>
+                <!-- Fixed project card structure - moved out of previous card -->
+                <div class="project-card" data-category="engineering">
+                    <div class="project-img">
+                        <img src="images/Project5.jpg" alt="Project 5">
+                    </div>
+                    <div class="project-info">
+                        <h3>Auto Stream - Azure Stack</h3>
+                        <p>This Data Engineering project is an end-to-end implementation designed to provide hands-on experience with technologies such as Azure Data Factory, Databricks, and PySpark. It demonstrates how to utilize modern data engineering practices such as the Medallion architecture, Delta Lake, Delta Tables, and Unity Catalog for data governance.</p>
+                        <div class="project-tags">
+                            <span>SQL</span>
+                            <span>Python</span>
+                            <span>Data Factory</span>
+                            <span>Databricks</span>
+                            <span>Rest API</span>
+                            <span>Data Modelling</span>
+                        </div>
+                        <a href="https://github.com/sashi789/DE_REDDIT_PROJECT" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>    
                 </div>
             </div>
             <div class="projects-more">
-                <a href="#" class="btn primary-btn">View All Projects</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="resume" class="resume">
-        <div class="container">
-            <div class="section-title">
-                <h2>Resume</h2>
-                <span class="line"></span>
-            </div>
-            <div class="resume-content">
-                <p>Download my full resume to learn more about my skills, experience, and qualifications.</p>
-                <a href="resume.pdf" download class="btn primary-btn"><i class="fas fa-download"></i> Download Resume</a>
+                <a href="https://github.com/sashi789" class="btn primary-btn">View All Projects</a>
             </div>
         </div>
     </section>
@@ -274,7 +301,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Contact Me</h2>
+                <h2>Contact Me - It Works, DM ME!!!</h2>
                 <span class="line"></span>
             </div>
             <div class="contact-content">
@@ -297,18 +324,16 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h3>Location</h3>
-                            <p>Dallas, TX</p>
+                            <p>United States</p>
                         </div>
                     </div>
                     <div class="social-icons">
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-kaggle"></i></a>
+                        <a href="https://www.linkedin.com/in/sashidharchary" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/sashi789" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/mgvkvbvy" method="POST">
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
