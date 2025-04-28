@@ -127,28 +127,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form submission
+    // Form submission handling
     const contactForm = document.getElementById('contactForm');
-    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            // For now, we'll just log it and show a success message
-            console.log('Form submitted:', { name, email, subject, message });
-            
-            // Show success message (you can replace this with your own UI)
-            alert('Thank you for your message! I will get back to you soon.');
-            
-            // Reset form
-            contactForm.reset();
+            // Form will still submit to Formspree
+            // This just shows a message to the user
+            setTimeout(function() {
+                alert('Thank you for your message! I will get back to you soon.');
+            }, 1000);
         });
     }
 
@@ -179,4 +166,137 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Run on scroll
     window.addEventListener('scroll', revealOnScroll);
+    
+    // Data Tools Static Sphere with Switching Icons
+    // Data Tools Sphere Animation - Rotating version
+    const createDataSphere = () => {
+        const sphere = document.getElementById('dataSphere');
+        const tools = [
+            { icon: 'fab fa-python', name: 'Python' },
+            { icon: 'fas fa-database', name: 'SQL' },
+            { icon: 'fab fa-r-project', name: 'R' },
+            { icon: 'fas fa-chart-bar', name: 'Tableau' },
+            { icon: 'fas fa-chart-pie', name: 'Power BI' },
+            { icon: 'fas fa-brain', name: 'ML' },
+            { icon: 'fas fa-chart-line', name: 'Visualization' },
+            { icon: 'fas fa-cogs', name: 'ETL' },
+            { icon: 'fas fa-server', name: 'Big Data' },
+            { icon: 'fas fa-calculator', name: 'Statistics' },
+            { icon: 'fab fa-aws', name: 'AWS' },
+            { icon: 'fab fa-docker', name: 'Docker' },
+            { icon: 'fab fa-git-alt', name: 'Git' },
+            { icon: 'fas fa-code-branch', name: 'Version Control' },
+            { icon: 'fas fa-project-diagram', name: 'Spark' }
+        ];
+        
+        const radius = 150; // Sphere radius
+        
+        tools.forEach((tool, index) => {
+            // Calculate position on sphere
+            const phi = Math.acos(-1 + (2 * index) / tools.length);
+            const theta = Math.sqrt(tools.length * Math.PI) * phi;
+            
+            // Convert to Cartesian coordinates
+            const x = radius * Math.cos(theta) * Math.sin(phi);
+            const y = radius * Math.sin(theta) * Math.sin(phi);
+            const z = radius * Math.cos(phi);
+            
+            // Create tool element
+            const toolElement = document.createElement('div');
+            toolElement.className = 'data-tool';
+            toolElement.innerHTML = `<i class="${tool.icon}" title="${tool.name}"></i>`;
+            
+            // Position in 3D space
+            toolElement.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+            
+            // Add to sphere
+            sphere.appendChild(toolElement);
+        });
+    };
+    
+    createDataSphere();
+
+    // Data Tools Falling Animation
+    const createDataTools = () => {
+        const sphere = document.getElementById('dataSphere');
+        
+        // Clear any existing content first
+        sphere.innerHTML = '';
+        
+        const tools = [
+            { icon: 'fab fa-python', name: 'Python' },
+            { icon: 'fas fa-database', name: 'SQL' },
+            { icon: 'fab fa-r-project', name: 'R' },
+            { icon: 'fas fa-chart-bar', name: 'Tableau' },
+            { icon: 'fas fa-chart-pie', name: 'Power BI' },
+            { icon: 'fas fa-brain', name: 'ML' },
+            { icon: 'fas fa-chart-line', name: 'Visualization' },
+            { icon: 'fas fa-cogs', name: 'ETL' },
+            { icon: 'fas fa-server', name: 'Big Data' },
+            { icon: 'fas fa-calculator', name: 'Statistics' },
+            { icon: 'fab fa-aws', name: 'AWS' },
+            { icon: 'fab fa-docker', name: 'Docker' },
+            { icon: 'fab fa-git-alt', name: 'Git' },
+            { icon: 'fas fa-code-branch', name: 'Version Control' },
+            { icon: 'fas fa-project-diagram', name: 'Spark' }
+        ];
+        
+        // Calculate positions in a grid layout
+        const columns = 5;
+        const rows = Math.ceil(tools.length / columns);
+        const cellWidth = sphere.offsetWidth / columns;
+        const cellHeight = sphere.offsetHeight / rows;
+        
+        tools.forEach((tool, index) => {
+            // Calculate grid position
+            const row = Math.floor(index / columns);
+            const col = index % columns;
+            
+            // Calculate x and y position
+            const x = col * cellWidth + (cellWidth / 2) - 30; // 30 is half the tool width
+            const y = row * cellHeight + (cellHeight / 2) - 30; // 30 is half the tool height
+            
+            // Create tool element
+            const toolElement = document.createElement('div');
+            toolElement.className = 'data-tool';
+            toolElement.innerHTML = `<i class="${tool.icon}" title="${tool.name}"></i>`;
+            
+            // Position in grid
+            toolElement.style.left = `${x}px`;
+            toolElement.style.top = `${y}px`;
+            
+            // Add to container
+            sphere.appendChild(toolElement);
+            
+            // Add falling animation with delay based on index
+            setTimeout(() => {
+                toolElement.style.animation = `fallDown 1s ease forwards`;
+                toolElement.style.animationDelay = `${index * 0.1}s`;
+                toolElement.style.opacity = '1';
+            }, 500); // Start after page load
+        });
+    };
+    
+    // Check if about section is visible on load or scroll
+    const aboutSection = document.getElementById('about');
+    const checkAboutVisibility = () => {
+        if (aboutSection) {
+            const rect = aboutSection.getBoundingClientRect();
+            const isVisible = (rect.top <= window.innerHeight && rect.bottom >= 0);
+            
+            if (isVisible && !aboutSection.classList.contains('tools-loaded')) {
+                createDataTools();
+                aboutSection.classList.add('tools-loaded');
+            }
+        }
+    };
+    
+    // Check on load
+    checkAboutVisibility();
+    
+    // Check on scroll
+    window.addEventListener('scroll', checkAboutVisibility);
+    
+    // Remove the createDataSphere call since we're using the falling animation instead
+    // createDataSphere();
 });
