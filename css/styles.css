@@ -486,6 +486,26 @@ nav ul li a.active::after {
     margin-bottom: 8px;
 }
 
+.experience-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.experience-list li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.contact-item a {
+    color: var(--primary-color);
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
 /* Projects Section */
 .projects-filter {
     display: flex;
