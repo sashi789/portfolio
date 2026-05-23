@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Typed.js initialization
     const typed = new Typed('.typing', {
-        strings: ['Analyst', 'Engineer', 'Scientist', 'Enthusiast'],
+        strings: [
+            'SDET',
+            'AI Automation Engineer',
+            'QA Automation Engineer',
+            'LLM & RAG Tester'
+        ],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -167,56 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Run on scroll
     window.addEventListener('scroll', revealOnScroll);
     
-    // Data Tools Static Sphere with Switching Icons
-    // Data Tools Sphere Animation - Rotating version
-    const createDataSphere = () => {
-        const sphere = document.getElementById('dataSphere');
-        const tools = [
-            { icon: 'fab fa-python', name: 'Python' },
-            { icon: 'fas fa-database', name: 'SQL' },
-            { icon: 'fab fa-r-project', name: 'R' },
-            { icon: 'fas fa-chart-bar', name: 'Tableau' },
-            { icon: 'fas fa-chart-pie', name: 'Power BI' },
-            { icon: 'fas fa-brain', name: 'ML' },
-            { icon: 'fas fa-chart-line', name: 'Visualization' },
-            { icon: 'fas fa-cogs', name: 'ETL' },
-            { icon: 'fas fa-server', name: 'Big Data' },
-            { icon: 'fas fa-calculator', name: 'Statistics' },
-            { icon: 'fab fa-aws', name: 'AWS' },
-            { icon: 'fab fa-docker', name: 'Docker' },
-            { icon: 'fab fa-git-alt', name: 'Git' },
-            { icon: 'fas fa-code-branch', name: 'Version Control' },
-            { icon: 'fas fa-project-diagram', name: 'Spark' }
-        ];
-        
-        const radius = 150; // Sphere radius
-        
-        tools.forEach((tool, index) => {
-            // Calculate position on sphere
-            const phi = Math.acos(-1 + (2 * index) / tools.length);
-            const theta = Math.sqrt(tools.length * Math.PI) * phi;
-            
-            // Convert to Cartesian coordinates
-            const x = radius * Math.cos(theta) * Math.sin(phi);
-            const y = radius * Math.sin(theta) * Math.sin(phi);
-            const z = radius * Math.cos(phi);
-            
-            // Create tool element
-            const toolElement = document.createElement('div');
-            toolElement.className = 'data-tool';
-            toolElement.innerHTML = `<i class="${tool.icon}" title="${tool.name}"></i>`;
-            
-            // Position in 3D space
-            toolElement.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
-            
-            // Add to sphere
-            sphere.appendChild(toolElement);
-        });
-    };
-    
-    createDataSphere();
-
-    // Data Tools Falling Animation
+    // Skills sphere animation (testing & AI tools)
     const createDataTools = () => {
         const sphere = document.getElementById('dataSphere');
         
@@ -224,21 +180,21 @@ document.addEventListener('DOMContentLoaded', function() {
         sphere.innerHTML = '';
         
         const tools = [
-            { icon: 'fab fa-python', name: 'Python' },
-            { icon: 'fas fa-database', name: 'SQL' },
-            { icon: 'fab fa-r-project', name: 'R' },
-            { icon: 'fas fa-chart-bar', name: 'Tableau' },
-            { icon: 'fas fa-chart-pie', name: 'Power BI' },
-            { icon: 'fas fa-brain', name: 'ML' },
-            { icon: 'fas fa-chart-line', name: 'Visualization' },
-            { icon: 'fas fa-cogs', name: 'ETL' },
-            { icon: 'fas fa-server', name: 'Big Data' },
-            { icon: 'fas fa-calculator', name: 'Statistics' },
-            { icon: 'fab fa-aws', name: 'AWS' },
+            { icon: 'fab fa-python', name: 'Python / pytest' },
+            { icon: 'fab fa-js', name: 'Playwright / TS' },
+            { icon: 'fas fa-vial', name: 'Selenium' },
+            { icon: 'fas fa-robot', name: 'LLM Testing' },
+            { icon: 'fas fa-shield-alt', name: 'AI Guardrails' },
+            { icon: 'fas fa-project-diagram', name: 'RAG' },
+            { icon: 'fas fa-tasks', name: 'Jira / Zephyr' },
+            { icon: 'fas fa-plug', name: 'API Testing' },
+            { icon: 'fab fa-aws', name: 'AWS Bedrock' },
+            { icon: 'fab fa-microsoft', name: 'Azure' },
+            { icon: 'fas fa-database', name: 'SQL / Snowflake' },
             { icon: 'fab fa-docker', name: 'Docker' },
-            { icon: 'fab fa-git-alt', name: 'Git' },
-            { icon: 'fas fa-code-branch', name: 'Version Control' },
-            { icon: 'fas fa-project-diagram', name: 'Spark' }
+            { icon: 'fab fa-github', name: 'GitHub Actions' },
+            { icon: 'fas fa-cloud', name: 'Terraform' },
+            { icon: 'fas fa-chart-pie', name: 'Power BI' }
         ];
         
         // Calculate positions in a grid layout
@@ -297,6 +253,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check on scroll
     window.addEventListener('scroll', checkAboutVisibility);
     
-    // Remove the createDataSphere call since we're using the falling animation instead
-    // createDataSphere();
 });
