@@ -1,16 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Typed.js initialization
-    const typed = new Typed('.typing', {
-        strings: [
-            'SDET',
-            'AI Automation Engineer',
-            'QA Automation Engineer',
-            'LLM & RAG Tester'
-        ],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+    const typingEl = document.querySelector('.typing');
+    if (typingEl && typeof Typed !== 'undefined') {
+        new Typed(typingEl, {
+            strings: [
+                'SDET',
+                'Data Engineer',
+                'Data Analyst',
+                'AI Automation Engineer'
+            ],
+            typeSpeed: 80,
+            backSpeed: 40,
+            backDelay: 1200,
+            startDelay: 400,
+            smartBackspace: true,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+    } else if (typingEl) {
+        typingEl.textContent = 'SDET';
+    }
 
     // Custom cursor
     const cursor = document.querySelector('.cursor');
